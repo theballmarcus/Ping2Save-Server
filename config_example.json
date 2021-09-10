@@ -1,0 +1,8 @@
+{ 
+    "passwords" : {
+        "save_note" : "a",
+        "save_file" : "b",
+        "view_password" : "c"
+    },
+    "port" : 1337
+}
