@@ -2,7 +2,8 @@
     "passwords" : {
         "save_note" : "a",
         "save_file" : "b",
-        "view_password" : "c"
+        "view_password" : "c",
+        "edit_password" : "d"
     },
     "port" : 1337
 }

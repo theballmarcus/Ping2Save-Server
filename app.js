@@ -4,8 +4,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var routers = require('./routers.js').routers;
+const fileUpload = require('express-fileupload');
+const cors = require('cors');
+const _ = require('lodash');
 
 var app = express();
+
+//file upload
+app.use(fileUpload({
+  createParentPath: true
+}));
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,7 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 for(i in routers.use) {
-  console.log(i)
   app.use(routers.use[i], routers.require[i])
 }
 

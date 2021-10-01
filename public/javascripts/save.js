@@ -5,6 +5,7 @@ function save() {
     $.post("/save", {
         "name" : name,
         "note" : note,
+        "file_name" : "",
         "file" : "",
         "password" : password
     }, function(data,status) { 
